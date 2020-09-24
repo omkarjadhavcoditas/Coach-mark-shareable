@@ -1,0 +1,17 @@
+:host {
+    --coach-mark-min-height: 72px;
+    --coach-mark-font-color: var(--neutral);
+    --coach-mark-font-family: var(--global-font-family);
+    --coach-mark-font-weight: var(--font-weight-regular);
+    --coach-mark-background-color: var(--primary-text);
+
+    --coach-mark-title-font: var(--body-2);
+    --coach-mark-title-color: var(--neutral);
+
+    --coach-mark-body-font: var(--body-1);
+    --coach-mark-body-text-color: var(--neutral);
+    
+    --coach-mark-close-icon-color: var(--neutral);
+    --coach-mark-visual-background:var(--secondary)
+}
+$coach-mark-font-size: 1.2rem;

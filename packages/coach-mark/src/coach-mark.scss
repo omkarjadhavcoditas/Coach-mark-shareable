@@ -1,0 +1,77 @@
+@import "./coach-mark-map.scss";
+
+.main-container {
+  position: fixed;
+  display: grid;
+  width: 100%;
+  bottom: 0px;
+  grid-template-columns: var(--spacing-02) auto;
+  min-height: var(--coach-mark-min-height);
+  font-family: var(--coach-mark-font-family);
+  font-size: $coach-mark-font-size;
+  color: var(--coach-mark-font-color);
+  font-weight: var(--coach-mark-font-weight);
+  animation: bottom-to-top 240ms 1;
+  animation-delay: 0ms;
+  animation-iteration-count: 1;
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 0);
+
+  &.coach-mark-out {
+    animation: top-to-bottom 150ms 1;
+    animation-delay: 0ms;
+    animation-iteration-count: 1;
+  }
+  .support-visual {
+    margin: 0px;
+    background-color: var(--coach-mark-visual-background);
+  }
+
+  .coach__container {
+    background-color: var(--coach-mark-background-color);
+    padding: var(--spacing-05);
+    position: relative;
+    box-shadow: 0, 2px, 6px, 0, RGBA(0, 0, 0, 0.2);
+
+    .button__icon--close {
+      --button-icon-color: var(--coach-mark-close-icon-color);
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      background-color: inherit;
+    }
+
+    .title-bar-with-icon {
+      display: flex;
+      justify-content: space-between;
+      .coach-mark-title {
+        font: var(--coach-mark-title-font);
+        color: var(--coach-mark-title-color);
+      }
+    }
+
+    .coach-body {
+      margin: 8px 0px;
+      font: var(--coach-mark-body-font);
+      color: var(--coach-mark-body-text-color);
+    }
+  }
+}
+
+@keyframes bottom-to-top {
+  from {
+    bottom: -110px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+
+@keyframes top-to-bottom {
+  from {
+    bottom: 0px;
+  }
+  to {
+    bottom: -110px;
+  }
+}

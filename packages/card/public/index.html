@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes" />
+
+  <title>Orxe3 Components</title>
+
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://components.qa.cnxloyalty.com/theme/css/imports.css"
+  />
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.3.0/custom-elements-es5-adapter.js"></script>
+
+</head>
+
+<body>
+  <style>
+    body {
+      background-color: #ccc;
+    }
+
+    .conatainer {
+      width: 40%;
+      background-color: grey;
+    }
+
+    .card-conatiner {
+      display: grid;
+      position: relative;
+    }
+
+    .default-card-img {
+      width: 100%;
+      height: 190px;
+    }
+
+    .default-card-header {
+      margin: 0;
+    }
+
+    .default-card-sub-heading {
+      color: grey;
+      margin: 0;
+    }
+
+    .default-card-detail-conatiner {
+      padding-top: 10px;
+    }
+
+    .rating-img {
+      width: 25px;
+      height: 16px;
+      vertical-align: middle;
+    }
+
+    .rating-text {
+      display: inline;
+      color: #6A9F6A;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    hr {
+      color: grey;
+      opacity: 30%;
+    }
+
+    .price-text {
+      color: grey;
+      margin: 0;
+    }
+
+    .price-section {
+      padding-top: 5px;
+    }
+
+    mark {
+      color: #238738;
+      background-color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .strike-text {
+      display: inline;
+      color: grey;
+      margin: 0;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .float-card-container {
+      display: grid;
+      grid-template-columns: 40% 60%;
+      position: relative;
+    }
+
+    .thumbnail {
+      width: 90%;
+      height: 100%;
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 1;
+      grid-row-end: 2;
+    }
+
+    .detail-conatainer {
+      padding-left: 5px;
+
+    }
+
+    h3 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .location-conatiner {
+      padding-top: 3px;
+    }
+
+    .loc-img {
+      width: 15px;
+      height: 18px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .loc-text {
+      display: inline;
+      margin: 0;
+      padding-left: 8px;
+      color: dimgrey;
+      font-size: 16px;
+      vertical-align: top;
+      font-weight: 500;
+    }
+
+    .float-container-ta-icon {
+      width: 25px;
+      height: 16px;
+      vertical-align: middle;
+    }
+
+    .float-container-rating-icon {
+      height: 18px;
+      padding-left: 5px;
+      margin: 0;
+      vertical-align: middle;
+    }
+
+    .float-container-user-review {
+      display: inline;
+      color: grey;
+      margin: 0;
+      justify-self: right;
+    }
+
+    .float-container-price-text {
+      color: green;
+      margin: 0;
+      padding-top: 5px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+  </style>
+
+  <h4>Card</h4>
+  <br /><br />
+  <div class="conatainer">
+    <orxe-card>
+      <div class="card-conatiner">
+        <img class="default-card-img" src="https://via.placeholder.com/728x400.jpg?text=PLACEHOLDER" alt="test-image" />
+        <div>
+          <h2 class="default-card-header">Taj Mahal And Agra Fort Tour</h2>
+          <p class="default-card-sub-heading">8hours | Tours and Sightseeing </p>
+        </div>
+        <p class="price-text">Price per person from </p>
+        <div class="price-section">
+          <span style='color:red;text-decoration:line-through'>
+            <p class="strike-text">$450 </p>
+          </span>
+          <p style="display:inline;color: grey;"> <mark>&nbsp$400</mark>&nbspOR<mark>&nbsp5000 Points</mark></p>
+        </div>
+      </div>
+    </orxe-card>
+  </div>
+
+  <h4>floating Card</h4>
+  <br /><br />
+  <div class="conatainer">
+    <orxe-card card-type='floating-card' a11y-close-label='close the card' close-icon>
+      <div class="float-card-container">
+        <img class="thumbnail" src="https://via.placeholder.com/728x400.jpg?text=PLACEHOLDER" alt="hotel-image" />
+        <div class="detail-conatainer">
+          <h3>The Cliffton Hotel</h3>
+          <div class="location-conatiner">
+            <img class="loc-img" src="https://via.placeholder.com/728x400.jpg?text=PLACEHOLDER" />
+            <p class="loc-text">Ubud, Bali</p>
+          </div>
+          <div class="location-conatiner">
+            <img class="float-container-ta-icon" src="https://via.placeholder.com/728x400.jpg?text=PLACEHOLDER" />
+            <img class="float-container-rating-icon" src="https://via.placeholder.com/728x400.jpg?text=PLACEHOLDER" />
+            <p class="float-container-user-review">3,362 reviews</p>
+            <p class="float-container-price-text">$120 avg/night</p>
+          </div>
+        </div>
+      </div>
+    </orxe-card>
+  </div>
+  </div>
+</body>
+
+</html>

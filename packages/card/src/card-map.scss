@@ -1,0 +1,10 @@
+:host{
+    --card-font-family: var(--global-font-family);
+    --card-font-color: var(--secondary-text);
+    --card-font-weight: var(--font-weight-regular);
+    --card-close-icon-color: currentColor;
+    --card-background-color: var(--neutral);
+    --card-min-height: 48px;
+    --floating-card-max-height: 177px;
+}
+$card-font-size: 1.2rem;
