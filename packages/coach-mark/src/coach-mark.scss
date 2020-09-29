@@ -48,6 +48,14 @@
         font: var(--coach-mark-title-font);
         color: var(--coach-mark-title-color);
       }
+      .close-button {
+        margin: 0px;
+        cursor: pointer;
+        min-width: 16px;
+        max-width: 16px;
+        min-height: 16px;
+        max-height: 16px;
+      }
     }
 
     .coach-body {
