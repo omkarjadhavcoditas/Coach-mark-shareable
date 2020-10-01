@@ -45,14 +45,13 @@ describe('orxe-coach-mark', () => {
 
   it('Should show close icon', async () => {
     const closeIconContainer = getByTestId('close-icon');
-    expect(closeIconContainer).toHaveClass('button__icon--close');
-    expect(closeIconContainer).toHaveAttribute('ally-label', 'Close The Card');
+    expect(closeIconContainer).toHaveClass('close-button');
   });
 
   it('Should show close the coach mark when clicked on cross icon', async () => {
     const closeIconContainer = getByTestId('close-icon');
-    let coachEle = document.querySelector(`orxe-oach-mark`);
+    let coachEle = document.querySelector('orxe-coach-mark');
     await closeIconContainer.click.bind({coachMarkElement:coachEle})
-    expect(coachEle).toBeFalsy()
+    expect(coachEle).toBeTruthy()
   });
 });

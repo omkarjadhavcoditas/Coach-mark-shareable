@@ -3,15 +3,14 @@
  * @module CoachMark
  */
 
-import { html, customElement, property, query } from 'lit-element';
+import { html, customElement, property, query, LitElement } from 'lit-element';
 import styles from './coach-mark-css';
-import { TranslationClass } from '@orxe-culture/lit';
 
 /**
  * @noInheritDoc
  */
 @customElement('orxe-coach-mark')
-export default class OrxeCoachMark extends TranslationClass {
+export default class OrxeCoachMark extends LitElement {
   @query('#coach-mark-main') private coachMarkElement;
   /**
  *
@@ -40,7 +39,7 @@ export default class OrxeCoachMark extends TranslationClass {
       <div class="coach__container">
         <div class="title-bar-with-icon">
           <label class="coach-mark-title">${this.title}</label>
-          <p class="close-button" @click="${this._destroyCoachMark}">
+          <p data-testid="close-icon" class="close-button" @click="${this._destroyCoachMark}">
             <span class="close-button"> &#10005; </span> 
           </p>
         </div>
@@ -49,24 +48,6 @@ export default class OrxeCoachMark extends TranslationClass {
     </div>
     `;
   }
-
-  /**
-   * This method render the close icon
-   */
-  // private _renderCloseIcon() {
-  //   return html`
-  //       <orxe-button
-  //         class="button__icon--close"
-  //         kind="iconOnly"
-  //         icon="ic-close"
-  //         icon-size="small"
-  //         data-testid="close-icon"
-  //         ally-label="Close The Card"
-  //         @click=${this._destroyCoachMark}
-  //       >
-  //       </orxe-button>
-  //     `;
-  // }
 
   /**
    * This methid will destroy the coach mark , when user click on the close icon
